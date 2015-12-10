@@ -40,3 +40,8 @@
 
 # A purely functional apporach to building large applications
 
+* what did you use for your slides?
+* monad transformers - think of them as being able to work on the inner type, e.g. Future[Option[Int]], OptionT[Future, Int] can work on the Int inside the Option
+* kleisli - extracts out types , e.g. String => Future[Int] gives ReaderT[Future, String, Int] 
+
+# Optimising Scala for Fun & Profit
