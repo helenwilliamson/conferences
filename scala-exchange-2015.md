@@ -1,3 +1,7 @@
+# Scaling Intelligence: moving ideas forward 
+
+* Be kind to learners - README, use imports, blog about it, stackoverflow
+
 # Count-Min sketch
 
 ## Problem
@@ -45,3 +49,46 @@
 * kleisli - extracts out types , e.g. String => Future[Int] gives ReaderT[Future, String, Int] 
 
 # Optimising Scala for Fun & Profit
+
+* lions share - automated tool for capturing allocation sources
+* gc tenurary? if creating lots of objects, garbage will be pushed into old gen (only collected once full gc occurs)
+
+# Idiomatic Scala: Your Options Do Not Match
+
+* fold safe than getOrElse - compile safe
+* Option.contains, e.g. Some("banana") contains "a" == true
+* using HOF means you can evolve your codebase -> e.g. if Option moves to Seq
+
+# Evolution, revolution, revelation... Trench stories in moving a team to Scala
+
+* picking a project - independant from external services
+
+# Lessions from Clojure
+
+* things for state - ref, agent, atom (all non-blocking for reads)
+* akka agents?
+* protocols - add in behaviour to existing Types
+
+# Securing Microservices using Play and Akka HTTP
+
+* could split auth into each service, but then duplication, compilcation
+* API gateway 
+* basic auth
+* oauth2 - is there enough support?
+* json web token
+
+# Why Scala for Hadoop
+
+* Mapper - big, static, enterprisy
+
+# Reactive in practice: web services with Scala and AWS 
+
+* defaults - think about what will fit in memory on specific aws instance size
+* Deploying to AWS - console, cli, sdk
+* nohup sbt run & - not going to work if you scale elastically - use AMI
+* slick db pool - HikariCP
+
+# Inappropriate applications for Scala
+
+## mpd decoding
+* mutability - inside loops without letting state be exposed outside due to performance benefits
