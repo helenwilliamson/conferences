@@ -92,3 +92,24 @@
 
 ## mpd decoding
 * mutability - inside loops without letting state be exposed outside due to performance benefits
+
+## game boy emulator
+* seems simple, but old systems = tightly coupled monsters
+
+# Typelevel - the benefits of collaboration
+
+* http://non.github.io/
+
+# Shapeless for mortals
+
+* trait, implementation and implicits
+* Singleton types - "bar".narrow = subclass of String, which is checked at compile time and erased back to String at runtime
+* Witness - way to get at the singleton type from the value ? Typelevel to ValueLevel ??
+* HList (Hetrogeneous List) - at compile type, know length and type of content
+* LabelledGeneric - allows you to convert between HList and Case Class
+* Coproduct - represents sealed trait with multiple implementations. generalised options.
+** coproduct reading and writing. think of it as checking current format for name, if matches apply. otherwise go onto the next one. continue until find match
+* trait A { type: T} - if you want to have implicit A and implicit T, need HipsterAux
+* implicit resolution - for recurisve types. use laxy implicit to hint to the compiler that it will eventually be resolved
+* keep formatters in separate package (scalac gets confused)
+
